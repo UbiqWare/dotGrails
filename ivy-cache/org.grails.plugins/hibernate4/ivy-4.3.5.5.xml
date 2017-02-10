@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.grails.plugins"
+		module="hibernate4"
+		revision="4.3.5.5"
+		status="release"
+		publication="20161130210825"
+	>
+		<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt" />
+		<description homepage="http://grails.org/plugin/hibernate4">
+		Provides integration between Grails and Hibernate 4 through GORM
+		</description>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="hibernate4" type="zip" ext="zip" conf="master"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.hibernate" name="hibernate-validator" rev="5.0.3.Final" force="true" conf="runtime->compile(*),runtime(*),master(*)"/>
+		<dependency org="org.hibernate" name="hibernate-ehcache" rev="4.3.5.Final" force="true" conf="runtime->compile(*),runtime(*),master(*)">
+			<exclude org="net.sf.ehcache" module="ehcache-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.jboss.logging" module="jboss-logging-annotations" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="net.sf.ehcache" name="ehcache-core" rev="2.4.8" force="true" conf="runtime->compile(*),runtime(*),master(*)"/>
+		<dependency org="org.jboss.logging" name="jboss-logging" rev="3.1.0.GA" force="true" conf="runtime->compile(*),runtime(*),master(*)"/>
+		<dependency org="org.grails" name="grails-datastore-core" rev="3.1.2.RELEASE" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="org.springframework" module="spring-context" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-beans" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-bootstrap" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-async" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.transaction" module="jta" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.grails" name="grails-datastore-gorm" rev="3.1.2.RELEASE" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="org.springframework" module="spring-context" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-beans" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-bootstrap" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-async" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.transaction" module="jta" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.grails" name="grails-datastore-gorm-hibernate4" rev="3.1.2.RELEASE" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="org.springframework" module="spring-context" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-beans" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-bootstrap" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-async" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.transaction" module="jta" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.grails" name="grails-datastore-simple" rev="3.1.2.RELEASE" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="org.springframework" module="spring-context" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-beans" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-bootstrap" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-async" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.transaction" module="jta" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="javax.validation" name="validation-api" rev="1.1.0.Final" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+	</dependencies>
+</ivy-module>

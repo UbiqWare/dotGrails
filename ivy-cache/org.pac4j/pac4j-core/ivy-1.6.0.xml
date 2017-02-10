@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.pac4j"
+		module="pac4j-core"
+		revision="1.6.0"
+		status="release"
+		publication="20161130210912"
+	>
+		<description homepage="" />
+		<m:dependency.management__junit__junit__version>4.11</m:dependency.management__junit__junit__version>
+		<m:dependency.management__commons-codec__commons-codec__version>1.7</m:dependency.management__commons-codec__commons-codec__version>
+		<m:dependency.management__org.pac4j__pac4j-core__version>1.6.0</m:dependency.management__org.pac4j__pac4j-core__version>
+		<m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>2.0.6</m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>
+		<m:dependency.management__org.apache.httpcomponents__httpclient__version>4.3.5</m:dependency.management__org.apache.httpcomponents__httpclient__version>
+		<m:properties__cas.version>3.5.1</m:properties__cas.version>
+		<m:dependency.management__ch.qos.logback__logback-classic__version>1.0.7</m:dependency.management__ch.qos.logback__logback-classic__version>
+		<m:dependency.management__org.pac4j__pac4j-cas__version>1.6.0</m:dependency.management__org.pac4j__pac4j-cas__version>
+		<m:dependency.management__org.slf4j__log4j-over-slf4j__version>1.7.2</m:dependency.management__org.slf4j__log4j-over-slf4j__version>
+		<m:dependency.management__org.openid4java__openid4java__version>0.9.8</m:dependency.management__org.openid4java__openid4java__version>
+		<m:dependency.management__org.openid4java__openid4java__exclusion_0>commons-logging__commons-logging</m:dependency.management__org.openid4java__openid4java__exclusion_0>
+		<m:dependency.management__org.slf4j__jcl-over-slf4j__version>1.7.2</m:dependency.management__org.slf4j__jcl-over-slf4j__version>
+		<m:dependency.management__org.jasig.cas__cas-server-support-oauth__version>3.5.1</m:dependency.management__org.jasig.cas__cas-server-support-oauth__version>
+		<m:dependency.management__xml-security__xmlsec__version>1.3.0</m:dependency.management__xml-security__xmlsec__version>
+		<m:properties__sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</m:properties__sonatypeOssDistMgmtSnapshotsUrl>
+		<m:maven.plugins>org.apache.maven.plugins__maven-enforcer-plugin__1.0|org.apache.maven.plugins__maven-enforcer-plugin__1.0|org.apache.maven.plugins__maven-surefire-plugin__2.12.4|org.apache.maven.plugins__maven-failsafe-plugin__2.6|org.apache.maven.plugins__maven-compiler-plugin__3.1|org.apache.maven.plugins__maven-source-plugin__null|org.apache.maven.plugins__maven-javadoc-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__1.0|org.apache.maven.plugins__maven-enforcer-plugin__1.0|org.apache.maven.plugins__maven-surefire-plugin__2.12.4|org.apache.maven.plugins__maven-failsafe-plugin__2.6|org.apache.maven.plugins__maven-compiler-plugin__3.1|org.apache.maven.plugins__maven-source-plugin__null|org.apache.maven.plugins__maven-javadoc-plugin__null|org.apache.felix__maven-bundle-plugin__null|org.apache.maven.plugins__maven-source-plugin__null|org.apache.maven.plugins__maven-javadoc-plugin__null|org.apache.maven.plugins__maven-jar-plugin__null</m:maven.plugins>
+		<m:dependency.management__org.slf4j__slf4j-api__version>1.7.2</m:dependency.management__org.slf4j__slf4j-api__version>
+		<m:dependency.management__org.apache.commons__commons-lang3__version>3.1</m:dependency.management__org.apache.commons__commons-lang3__version>
+		<m:dependency.management__org.scribe__scribe__version>1.3.6</m:dependency.management__org.scribe__scribe__version>
+		<m:dependency.management__net.sourceforge.htmlunit__htmlunit__version>2.15</m:dependency.management__net.sourceforge.htmlunit__htmlunit__version>
+		<m:dependency.management__com.googlecode__kryo__version>1.04</m:dependency.management__com.googlecode__kryo__version>
+		<m:properties__slf4j.version>1.7.2</m:properties__slf4j.version>
+		<m:dependency.management__net.sourceforge.nekohtml__nekohtml__version>1.9.21</m:dependency.management__net.sourceforge.nekohtml__nekohtml__version>
+		<m:dependency.management__org.jasig.cas__cas-server-webapp__version>3.5.1</m:dependency.management__org.jasig.cas__cas-server-webapp__version>
+		<m:dependency.management__org.mockito__mockito-core__version>1.9.5</m:dependency.management__org.mockito__mockito-core__version>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:dependency.management__net.sourceforge.htmlunit__htmlunit__exclusion_0>commons-logging__commons-logging</m:dependency.management__net.sourceforge.htmlunit__htmlunit__exclusion_0>
+		<m:dependency.management__org.jasig.cas.client__cas-client-core__exclusion_0>commons-logging__commons-logging</m:dependency.management__org.jasig.cas.client__cas-client-core__exclusion_0>
+		<m:dependency.management__org.opensaml__opensaml__version>2.5.1-1</m:dependency.management__org.opensaml__opensaml__version>
+		<m:dependency.management__javax.servlet__javax.servlet-api__version>3.0.1</m:dependency.management__javax.servlet__javax.servlet-api__version>
+		<m:dependency.management__xml-apis__xml-apis__version>1.4.01</m:dependency.management__xml-apis__xml-apis__version>
+		<m:dependency.management__org.jasig.cas.client__cas-client-core__version>3.3.3</m:dependency.management__org.jasig.cas.client__cas-client-core__version>
+		<m:dependency.management__org.pac4j__pac4j-oauth__version>1.6.0</m:dependency.management__org.pac4j__pac4j-oauth__version>
+		<m:dependency.management__javax.servlet__javax.servlet-api__scope>provided</m:dependency.management__javax.servlet__javax.servlet-api__scope>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="pac4j-core" type="jar" ext="jar" conf="master"/>
+		<artifact name="pac4j-core" type="source" ext="jar" conf="sources" m:classifier="sources"/>
+		<artifact name="pac4j-core" type="javadoc" ext="jar" conf="javadoc" m:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.2" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.0.1" force="true" conf="provided->compile(*),provided(*),runtime(*),master(*)"/>
+		<dependency org="com.googlecode" name="kryo" rev="1.04" force="true" conf="provided->compile(*),provided(*),runtime(*),master(*)"/>
+		<dependency org="junit" name="junit" rev="4.11" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="net.sourceforge.htmlunit" name="htmlunit" rev="2.15" force="true" conf="test->runtime(*),master(*)">
+			<exclude org="commons-logging" module="commons-logging" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.slf4j" name="jcl-over-slf4j" rev="1.7.2" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="ch.qos.logback" name="logback-classic" rev="1.0.7" force="true" conf="test->runtime(*),master(*)"/>
+		<override org="commons-codec" module="commons-codec" matcher="exact" rev="1.7"/>
+		<override org="net.sourceforge.htmlunit" module="htmlunit" matcher="exact" rev="2.15"/>
+		<override org="javax.servlet" module="javax.servlet-api" matcher="exact" rev="3.0.1"/>
+		<override org="org.pac4j" module="pac4j-oauth" matcher="exact" rev="1.6.0"/>
+		<override org="org.apache.commons" module="commons-lang3" matcher="exact" rev="3.1"/>
+		<override org="junit" module="junit" matcher="exact" rev="4.11"/>
+		<override org="org.scribe" module="scribe" matcher="exact" rev="1.3.6"/>
+		<override org="ch.qos.logback" module="logback-classic" matcher="exact" rev="1.0.7"/>
+		<override org="com.googlecode" module="kryo" matcher="exact" rev="1.04"/>
+		<override org="org.opensaml" module="opensaml" matcher="exact" rev="2.5.1-1"/>
+		<override org="org.jasig.cas" module="cas-server-webapp" matcher="exact" rev="3.5.1"/>
+		<override org="org.jasig.cas" module="cas-server-support-oauth" matcher="exact" rev="3.5.1"/>
+		<override org="org.apache.httpcomponents" module="httpclient" matcher="exact" rev="4.3.5"/>
+		<override org="org.slf4j" module="slf4j-api" matcher="exact" rev="1.7.2"/>
+		<override org="org.mockito" module="mockito-core" matcher="exact" rev="1.9.5"/>
+		<override org="org.openid4java" module="openid4java" matcher="exact" rev="0.9.8"/>
+		<override org="xml-apis" module="xml-apis" matcher="exact" rev="1.4.01"/>
+		<override org="org.slf4j" module="jcl-over-slf4j" matcher="exact" rev="1.7.2"/>
+		<override org="org.pac4j" module="pac4j-cas" matcher="exact" rev="1.6.0"/>
+		<override org="xml-security" module="xmlsec" matcher="exact" rev="1.3.0"/>
+		<override org="org.slf4j" module="log4j-over-slf4j" matcher="exact" rev="1.7.2"/>
+		<override org="com.fasterxml.jackson.core" module="jackson-databind" matcher="exact" rev="2.0.6"/>
+		<override org="net.sourceforge.nekohtml" module="nekohtml" matcher="exact" rev="1.9.21"/>
+		<override org="org.pac4j" module="pac4j-core" matcher="exact" rev="1.6.0"/>
+		<override org="org.jasig.cas.client" module="cas-client-core" matcher="exact" rev="3.3.3"/>
+	</dependencies>
+</ivy-module>

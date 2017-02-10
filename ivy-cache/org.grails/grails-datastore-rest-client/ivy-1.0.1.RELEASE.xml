@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.grails"
+		module="grails-datastore-rest-client"
+		revision="1.0.1.RELEASE"
+		status="release"
+		publication="20161130210926"
+	>
+		<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt" />
+		<description homepage="http://grails.org/">
+		GORM - Grails Data Access Framework
+		</description>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="grails-datastore-rest-client" type="jar" ext="jar" conf="master"/>
+		<artifact name="grails-datastore-rest-client" type="source" ext="jar" conf="sources" m:classifier="sources"/>
+		<artifact name="grails-datastore-rest-client" type="javadoc" ext="jar" conf="javadoc" m:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.0.1" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="junit" name="junit" rev="4.8.2" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.spockframework" name="spock-core" rev="0.7-groovy-2.0" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="commons-codec" name="commons-codec" rev="1.5" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)"/>
+		<dependency org="org.grails" name="grails-web" rev="2.3.9" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="commons-fileupload" module="commons-fileupload" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="commons-collections" module="commons-collections" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="commons-lang" module="commons-lang" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="commons-beanutils" module="commons-beanutils" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-spring" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-webmvc" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-databinding" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="taglibs" module="standard" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="junit" module="junit" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="xpp3" module="xpp3_min" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="opensymphony" module="sitemesh" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="com.googlecode.concurrentlinkedhashmap" module="concurrentlinkedhashmap-lru" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javax.servlet" module="jstl" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="commons-io" module="commons-io" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="commons-el" module="commons-el" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.objenesis" module="objenesis" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.grails" name="grails-plugin-converters" rev="2.3.9" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="org.grails" module="grails-plugin-datasource" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-plugin-controllers" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-plugin-domain-class" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-web" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.springframework" name="spring-test" rev="3.2.8.RELEASE" force="true" conf="test->runtime(*),master(*)"/>
+		<dependency org="org.grails" name="grails-core" rev="2.3.9" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+			<exclude org="xalan" module="serializer" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-expression" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="commons-collections" module="commons-collections" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="aopalliance" module="aopalliance" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-context-support" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.grails" module="grails-spring" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="commons-validator" module="commons-validator" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="cglib" module="cglib" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.aspectj" module="aspectjweaver" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-aop" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="oro" module="oro" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.hibernate.javax.persistence" module="hibernate-jpa-2.0-api" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.aspectj" module="aspectjrt" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-tx" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.springframework" module="spring-aspects" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="com.googlecode.concurrentlinkedhashmap" module="concurrentlinkedhashmap-lru" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="asm" module="asm" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+	</dependencies>
+</ivy-module>

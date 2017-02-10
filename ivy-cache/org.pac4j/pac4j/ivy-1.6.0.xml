@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+	<info organisation="org.pac4j"
+		module="pac4j"
+		revision="1.6.0"
+		status="release"
+		publication="20161130210913"
+	>
+		<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt" />
+		<description homepage="https://github.com/leleuj/pac4j">
+		Profile &amp; Authentication Client for Java
+		</description>
+		<m:dependency.management__junit__junit__version>4.11</m:dependency.management__junit__junit__version>
+		<m:dependency.management__commons-codec__commons-codec__version>1.7</m:dependency.management__commons-codec__commons-codec__version>
+		<m:dependency.management__org.pac4j__pac4j-core__version>1.6.0</m:dependency.management__org.pac4j__pac4j-core__version>
+		<m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>2.0.6</m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>
+		<m:dependency.management__org.apache.httpcomponents__httpclient__version>4.3.5</m:dependency.management__org.apache.httpcomponents__httpclient__version>
+		<m:properties__cas.version>3.5.1</m:properties__cas.version>
+		<m:dependency.management__ch.qos.logback__logback-classic__version>1.0.7</m:dependency.management__ch.qos.logback__logback-classic__version>
+		<m:dependency.management__org.pac4j__pac4j-cas__version>1.6.0</m:dependency.management__org.pac4j__pac4j-cas__version>
+		<m:dependency.management__org.slf4j__log4j-over-slf4j__version>1.7.2</m:dependency.management__org.slf4j__log4j-over-slf4j__version>
+		<m:dependency.management__org.openid4java__openid4java__version>0.9.8</m:dependency.management__org.openid4java__openid4java__version>
+		<m:dependency.management__org.openid4java__openid4java__exclusion_0>commons-logging__commons-logging</m:dependency.management__org.openid4java__openid4java__exclusion_0>
+		<m:dependency.management__org.slf4j__jcl-over-slf4j__version>1.7.2</m:dependency.management__org.slf4j__jcl-over-slf4j__version>
+		<m:dependency.management__org.jasig.cas__cas-server-support-oauth__version>3.5.1</m:dependency.management__org.jasig.cas__cas-server-support-oauth__version>
+		<m:dependency.management__xml-security__xmlsec__version>1.3.0</m:dependency.management__xml-security__xmlsec__version>
+		<m:properties__sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</m:properties__sonatypeOssDistMgmtSnapshotsUrl>
+		<m:maven.plugins>org.apache.maven.plugins__maven-enforcer-plugin__1.0|org.apache.maven.plugins__maven-enforcer-plugin__1.0|org.apache.maven.plugins__maven-surefire-plugin__2.12.4|org.apache.maven.plugins__maven-failsafe-plugin__2.6|org.apache.maven.plugins__maven-compiler-plugin__3.1|org.apache.maven.plugins__maven-source-plugin__null|org.apache.maven.plugins__maven-javadoc-plugin__null</m:maven.plugins>
+		<m:dependency.management__org.slf4j__slf4j-api__version>1.7.2</m:dependency.management__org.slf4j__slf4j-api__version>
+		<m:dependency.management__org.apache.commons__commons-lang3__version>3.1</m:dependency.management__org.apache.commons__commons-lang3__version>
+		<m:dependency.management__org.scribe__scribe__version>1.3.6</m:dependency.management__org.scribe__scribe__version>
+		<m:dependency.management__net.sourceforge.htmlunit__htmlunit__version>2.15</m:dependency.management__net.sourceforge.htmlunit__htmlunit__version>
+		<m:dependency.management__com.googlecode__kryo__version>1.04</m:dependency.management__com.googlecode__kryo__version>
+		<m:properties__slf4j.version>1.7.2</m:properties__slf4j.version>
+		<m:dependency.management__net.sourceforge.nekohtml__nekohtml__version>1.9.21</m:dependency.management__net.sourceforge.nekohtml__nekohtml__version>
+		<m:dependency.management__org.jasig.cas__cas-server-webapp__version>3.5.1</m:dependency.management__org.jasig.cas__cas-server-webapp__version>
+		<m:dependency.management__org.mockito__mockito-core__version>1.9.5</m:dependency.management__org.mockito__mockito-core__version>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:dependency.management__net.sourceforge.htmlunit__htmlunit__exclusion_0>commons-logging__commons-logging</m:dependency.management__net.sourceforge.htmlunit__htmlunit__exclusion_0>
+		<m:dependency.management__org.jasig.cas.client__cas-client-core__exclusion_0>commons-logging__commons-logging</m:dependency.management__org.jasig.cas.client__cas-client-core__exclusion_0>
+		<m:dependency.management__org.opensaml__opensaml__version>2.5.1-1</m:dependency.management__org.opensaml__opensaml__version>
+		<m:dependency.management__javax.servlet__javax.servlet-api__version>3.0.1</m:dependency.management__javax.servlet__javax.servlet-api__version>
+		<m:dependency.management__xml-apis__xml-apis__version>1.4.01</m:dependency.management__xml-apis__xml-apis__version>
+		<m:dependency.management__org.jasig.cas.client__cas-client-core__version>3.3.3</m:dependency.management__org.jasig.cas.client__cas-client-core__version>
+		<m:dependency.management__org.pac4j__pac4j-oauth__version>1.6.0</m:dependency.management__org.pac4j__pac4j-oauth__version>
+		<m:dependency.management__javax.servlet__javax.servlet-api__scope>provided</m:dependency.management__javax.servlet__javax.servlet-api__scope>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+	</publications>
+</ivy-module>
